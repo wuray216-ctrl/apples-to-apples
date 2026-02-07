@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import {
   RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend,
@@ -9,8 +10,10 @@ import { findMatches, getRegion } from '../matching'
 import SearchInput from '../components/SearchInput'
 import IndicatorBar from '../components/IndicatorBar'
 import ScoreBar from '../components/ScoreBar'
+import LanguageSwitcher from '../components/LanguageSwitcher'
 
 export default function Compare() {
+  const { t } = useTranslation()
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
 
@@ -89,11 +92,12 @@ export default function Compare() {
       {/* Nav */}
       <div className="flex items-center gap-4 px-6 py-4 border-b border-border/30">
         <button onClick={() => navigate('/')} className="text-indigo-400 hover:text-indigo-300 text-sm font-semibold transition-colors">
-          ← Back
+          {t("compare.back")}
         </button>
         <span className="text-xs tracking-[3px] text-indigo-400 font-bold uppercase">🍎 Apples to Apples</span>
-        <div className="ml-auto text-xs text-slate-600">
-          {REGIONS.length} regions • 10 indicators
+        <div className="ml-auto flex items-center gap-3">
+          <LanguageSwitcher />
+          <span className="text-xs text-slate-600">{t('compare.region_count', { count: REGIONS.length })}</span>
         </div>
       </div>
 
@@ -102,7 +106,7 @@ export default function Compare() {
         <div className="w-80 border-r border-border/30 p-5 overflow-y-auto flex-shrink-0">
           {/* Source */}
           <div className="mb-5">
-            <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-2">Comparing</div>
+            <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-2">{t("compare.comparing")}</div>
             {source ? (
               <div className="flex items-center gap-3 p-3 bg-surface rounded-xl border-2 border-indigo-500/50">
                 <span className="text-2xl">{source.flag}</span>
@@ -115,13 +119,13 @@ export default function Compare() {
                 <button onClick={() => { setSourceId(null); setSelectedIds([]) }} className="ml-auto text-slate-600 hover:text-slate-300 text-xs">✕</button>
               </div>
             ) : (
-              <SearchInput value={null} onSelect={setSourceId} placeholder="Choose a region..." />
+              <SearchInput value={null} onSelect={setSourceId} placeholder={t("compare.choose_region")} />
             )}
           </div>
 
           {/* Preset selector */}
           <div className="mb-4">
-            <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-2">Match Mode</div>
+            <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-2">{t("compare.match_mode")}</div>
             <div className="flex gap-1.5">
               {Object.entries(MATCH_PRESETS).map(([key, { label }]) => (
                 <button
@@ -143,7 +147,7 @@ export default function Compare() {
               onClick={() => setShowWeights(!showWeights)}
               className="text-xs text-indigo-400 hover:text-indigo-300 font-semibold transition-colors"
             >
-              {showWeights ? '▾ Hide' : '▸ Show'} Custom Weights
+              {showWeights ? t('compare.hide_weights') : t('compare.show_weights')}
             </button>
             {showWeights && (
               <div className="mt-3 space-y-1">
@@ -170,7 +174,7 @@ export default function Compare() {
 
           {/* Match results */}
           <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-3">
-            Best Matches
+            {t("compare.best_matches")}
           </div>
           <div className="space-y-1">
             {matches.map(m => (
@@ -200,7 +204,7 @@ export default function Compare() {
         <div className="flex-1 p-6 overflow-y-auto">
           {compareRegions.length <= 1 ? (
             <div className="flex items-center justify-center h-96 text-slate-600">
-              ← Click regions on the left to compare (up to 5)
+              {t("compare.hint_select")}
             </div>
           ) : (
             <>
@@ -228,7 +232,7 @@ export default function Compare() {
 
               {/* Tab switcher */}
               <div className="flex gap-1 mb-4 bg-surface rounded-xl p-1 w-fit">
-                {[['bars', '📊 Bars'], ['radar', '🕸️ Radar'], ['scatter', '⬡ Scatter']].map(([key, label]) => (
+                {[['bars', t('compare.tab_bars')], ['radar', t('compare.tab_radar')], ['scatter', t('compare.tab_scatter')]].map(([key, label]) => (
                   <button
                     key={key}
                     onClick={() => setTab(key)}
@@ -247,7 +251,7 @@ export default function Compare() {
                     className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                       category === 'all' ? 'bg-indigo-500/20 border border-indigo-500/50 text-indigo-300' : 'border border-border text-slate-600 hover:text-slate-400'
                     }`}
-                  >📊 All (18)</button>
+                  >{t("compare.all_count")}</button>
                   {Object.entries(INDICATOR_CATEGORIES).map(([key, { label, keys }]) => (
                     <button
                       key={key}
@@ -275,7 +279,7 @@ export default function Compare() {
               {tab === 'radar' && (
                 <div className="bg-surface/60 rounded-2xl border border-border p-6">
                   <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-4">
-                    Normalized Multi-Dimensional Comparison
+                    {t("compare.radar_title")}
                   </div>
                   <ResponsiveContainer width="100%" height={420}>
                     <RadarChart data={radarData}>
@@ -300,9 +304,9 @@ export default function Compare() {
               {tab === 'scatter' && (
                 <div className="bg-surface/60 rounded-2xl border border-border p-6">
                   <div className="text-[11px] text-slate-600 uppercase tracking-widest font-bold mb-1">
-                    GDP per Capita vs Life Expectancy
+                    {t("compare.scatter_title")}
                   </div>
-                  <div className="text-[11px] text-slate-700 mb-4">Bubble size = population, selected regions highlighted</div>
+                  <div className="text-[11px] text-slate-700 mb-4">{t("compare.scatter_subtitle")}</div>
                   <ResponsiveContainer width="100%" height={420}>
                     <ScatterChart margin={{ top: 10, right: 10, bottom: 20, left: 10 }}>
                       <XAxis dataKey="x" name="GDP/capita" tick={{ fill: '#64748b', fontSize: 10 }}

@@ -1,0 +1,37 @@
+{
+  "home": {
+    "hero_title": "Compara lo que realmente es comparable.",
+    "hero_desc": "Comparar Georgia (país) con China no tiene sentido. ¿Pero Zhejiang, California y Baviera? Eso sí es comparar peras con peras.",
+    "compare": "Comparar",
+    "with": "con",
+    "on": "en",
+    "all_indicators": "Todos los indicadores",
+    "find_btn": "Buscar regiones similares →",
+    "placeholder_source": "ej. Zhejiang",
+    "placeholder_target": "ej. Baviera",
+    "regions": "Regiones",
+    "countries": "Países",
+    "provinces_states": "Provincias/Estados",
+    "indicators": "Indicadores",
+    "footer": "Apples to Apples — Datos del Banco Mundial, ONU, oficinas nacionales de estadística (2023)",
+    "github": "Ver en GitHub"
+  },
+  "compare": {
+    "back": "← Volver",
+    "comparing": "Comparando",
+    "choose_region": "Elige una región...",
+    "match_mode": "Modo de coincidencia",
+    "show_weights": "▸ Mostrar pesos personalizados",
+    "hide_weights": "▾ Ocultar pesos personalizados",
+    "best_matches": "Mejores coincidencias",
+    "hint_select": "← Haz clic en las regiones de la izquierda para comparar (hasta 5)",
+    "tab_bars": "📊 Barras",
+    "tab_radar": "🕸️ Radar",
+    "tab_scatter": "⬡ Dispersión",
+    "all_count": "📊 Todos (18)",
+    "radar_title": "Comparación multidimensional normalizada",
+    "scatter_title": "PIB per cápita vs Esperanza de vida",
+    "scatter_subtitle": "Tamaño de burbuja = población, regiones seleccionadas resaltadas",
+    "region_count": "{{count}} regiones • 10 indicadores"
+  }
+}
