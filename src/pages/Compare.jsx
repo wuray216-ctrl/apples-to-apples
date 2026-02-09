@@ -97,7 +97,7 @@ export default function Compare() {
         <span className="text-xs tracking-[3px] text-indigo-400 font-bold uppercase">🍎 Apples to Apples</span>
         <div className="ml-auto flex items-center gap-3">
           <LanguageSwitcher />
-          <span className="text-xs text-slate-600">{t('compare.region_count', { count: REGIONS.length })}</span>
+          <span className="text-xs text-slate-600">{t('compare.region_count', { count: REGIONS.length, indicators: Object.keys(INDICATORS).length })}</span>
         </div>
       </div>
 

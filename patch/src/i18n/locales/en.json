@@ -1,0 +1,37 @@
+{
+  "home": {
+    "hero_title": "Compare what's actually comparable.",
+    "hero_desc": "Comparing Georgia (country) to China doesn't make sense. But Zhejiang, California, and Bavaria? Now you're comparing apples to apples.",
+    "compare": "Compare",
+    "with": "with",
+    "on": "on",
+    "all_indicators": "All Indicators",
+    "find_btn": "Find Similar Regions →",
+    "placeholder_source": "e.g. Zhejiang",
+    "placeholder_target": "e.g. Bavaria",
+    "regions": "Regions",
+    "countries": "Countries",
+    "provinces_states": "Provinces/States",
+    "indicators": "Indicators",
+    "footer": "Apples to Apples — Data from World Bank, UN, national statistics bureaus (2023)",
+    "github": "View on GitHub"
+  },
+  "compare": {
+    "back": "← Back",
+    "comparing": "Comparing",
+    "choose_region": "Choose a region...",
+    "match_mode": "Match Mode",
+    "show_weights": "▸ Show Custom Weights",
+    "hide_weights": "▾ Hide Custom Weights",
+    "best_matches": "Best Matches",
+    "hint_select": "← Click regions on the left to compare (up to 5)",
+    "tab_bars": "📊 Bars",
+    "tab_radar": "🕸️ Radar",
+    "tab_scatter": "⬡ Scatter",
+    "all_count": "📊 All (18)",
+    "radar_title": "Normalized Multi-Dimensional Comparison",
+    "scatter_title": "GDP per Capita vs Life Expectancy",
+    "scatter_subtitle": "Bubble size = population, selected regions highlighted",
+    "region_count": "{{count}} regions • 10 indicators"
+  }
+}

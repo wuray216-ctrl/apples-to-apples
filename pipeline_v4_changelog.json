@@ -1,0 +1,14 @@
+{
+  "total_updates": 0,
+  "changes": [],
+  "skipped_major": [
+    "BRA",
+    "CHN",
+    "FRA",
+    "DEU",
+    "IND",
+    "JPN",
+    "GBR",
+    "USA"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "generatedAt": "2026-02-07 18:26:40",
+  "targetYear": 2022,
+  "source": "World Bank API v2",
+  "fieldsUpdated": [
+    "population",
+    "gdpBillions",
+    "gdpPerCapita",
+    "area",
+    "urbanization",
+    "gini",
+    "lifeExpectancy",
+    "co2PerCapita",
+    "literacy",
+    "doctors",
+    "hospitalBeds",
+    "manufacturing",
+    "forestCover",
+    "pm25",
+    "renewableEnergy",
+    "unemployment",
+    "inflation",
+    "rdExpenditure",
+    "militarySpending",
+    "populationDensity",
+    "birthRate",
+    "deathRate",
+    "exports",
+    "fdiInflow",
+    "healthExpenditure"
+  ],
+  "fieldsSkipped": [
+    "hdi (UNDP)",
+    "pisaScore (OECD)",
+    "universities (manual)",
+    "medianAge (UN)"
+  ],
+  "indicators": {
+    "population": {
+      "coverage": 261,
+      "primaryYear": 2022
+    },
+    "gdpBillions": {
+      "coverage": 255,
+      "primaryYear": 2022
+    },
+    "gdpPerCapita": {
+      "coverage": 255,
+      "primaryYear": 2022
+    },
+    "area": {
+      "coverage": 260,
+      "primaryYear": 2022
+    },
+    "urbanization": {
+      "coverage": 261,
+      "primaryYear": 2022
+    },
+    "gini": {
+      "coverage": 109,
+      "primaryYear": 2022
+    },
+    "lifeExpectancy": {
+      "coverage": 261,
+      "primaryYear": 2022
+    },
+    "literacy": {
+      "coverage": 132,
+      "primaryYear": 2022
+    },
+    "doctors": {
+      "coverage": 212,
+      "primaryYear": 2022
+    },
+    "hospitalBeds": {
+      "coverage": 168,
+      "primaryYear": 2022
+    },
+    "manufacturing": {
+      "coverage": 237,
+      "primaryYear": 2022
+    },
+    "forestCover": {
+      "coverage": 258,
+      "primaryYear": 2022
+    },
+    "pm25": {
+      "coverage": 244,
+      "primaryYear": 2020
+    },
+    "renewableEnergy": {
+      "coverage": 256,
+      "primaryYear": 2021
+    },
+    "unemployment": {
+      "coverage": 231,
+      "primaryYear": 2022
+    },
+    "inflation": {
+      "coverage": 223,
+      "primaryYear": 2022
+    },
+    "rdExpenditure": {
+      "coverage": 129,
+      "primaryYear": 2022
+    },
+    "militarySpending": {
+      "coverage": 195,
+      "primaryYear": 2022
+    },
+    "populationDensity": {
+      "coverage": 260,
+      "primaryYear": 2022
+    },
+    "birthRate": {
+      "coverage": 261,
+      "primaryYear": 2022
+    },
+    "deathRate": {
+      "coverage": 261,
+      "primaryYear": 2022
+    },
+    "exports": {
+      "coverage": 223,
+      "primaryYear": 2022
+    },
+    "fdiInflow": {
+      "coverage": 246,
+      "primaryYear": 2022
+    },
+    "healthExpenditure": {
+      "coverage": 237,
+      "primaryYear": 2022
+    }
+  }
+}

@@ -183,12 +183,15 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <div className="text-center py-6 border-t border-border/30 text-slate-700 text-xs">
+      <div className="text-center py-6 border-t border-border/30 text-slate-700 text-xs space-y-1.5">
         {t("home.footer")}
         <br />
         <a href="https://github.com" className="text-indigo-500/70 hover:text-indigo-400 transition-colors">
           {t("home.github")}
         </a>
+        <div className="mt-3 px-4 max-w-2xl mx-auto text-[10px] text-slate-600/70 leading-relaxed">
+          ⚠️ Data is approximate and compiled from multiple sources (World Bank, UN, WHO, UNESCO, IEA, national statistics bureaus). Country-level data is primarily from 2022–2023; subnational data (provinces, states, cities) may range from 2021–2023. Data years may differ across regions and indicators. Not all indicators are available for all regions. This tool is for educational and exploratory purposes only — please verify critical data with official sources.
+        </div>
       </div>
     </div>
   )
